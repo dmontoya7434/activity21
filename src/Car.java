@@ -1,12 +1,16 @@
-import java.util.Arrays;
+
 import java.util.Date;
 
 public final class Car extends Vehicle {
     //Step 10
+
+    //Local variables
     private Feature[] feature = new Feature[10];
     private int carAxle;
 
-    //public constructor
+    //public default constructor with no formal parameters and initialize
+    // all instance variables with generic literal values by using super() call
+
     public Car() {
         super();
 
@@ -16,6 +20,8 @@ public final class Car extends Vehicle {
         this.carAxle = 2;
     }
 
+    //A public overloaded constructor with a super() method call and
+    // instantiation of values for all of the variables defined above.
 
     public Car(Date vehicleManufacturedDate, String vehicleManufacturer, String vehicleMake,
                String vehicleModel, Chassis vehicleFrame, String vehicleType, String driveTrain,
@@ -27,6 +33,10 @@ public final class Car extends Vehicle {
         this.feature = feature;
         this.carAxle = carAxle;
     }
+
+    //Public methods to return formatted strings of the Internal and External features:
+    // These methods should display the following:Exterior Features   : Exterior [Wood Panels]
+    // : Exterior [Moonroof] Interior Features   : Interior [AM/FM Radio] : Interior [Air Conditioning]
 
     public String getExteriorFeatures() {
 

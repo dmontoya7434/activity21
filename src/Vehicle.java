@@ -2,6 +2,9 @@ import java.util.Date;
 
 public class Vehicle implements Engine, Chassis{
     //Step 9
+    // Create a concrete class named Vehicle that implements the Engine and
+    // Chassis interfaces with the following:
+
     private Date vehicleManufacturedDate;
     private String vehicleManufacturer;
     private String vehicleMake;
@@ -11,6 +14,8 @@ public class Vehicle implements Engine, Chassis{
     private String driveTrain;
     private Engine vehicleEngine;
 
+    // A public default constructor with no formal parameters and initialize all
+    // instance variables with generic literal values
 
     public Vehicle() {
         this.vehicleManufacturer = "Generic";
@@ -24,6 +29,8 @@ public class Vehicle implements Engine, Chassis{
         this.vehicleEngine.setDriveTrain("Generic");
     }
 
+    //A public overloaded constructor with values for all of the variables defined above.
+
     public Vehicle(Date vehicleManufacturedDate, String vehicleManufacturer, String vehicleMake, String vehicleModel,
                    Chassis vehicleFrame, String vehicleType, String driveTrain, Engine vehicleEngine) {
         this.vehicleManufacturedDate = vehicleManufacturedDate;
@@ -36,6 +43,9 @@ public class Vehicle implements Engine, Chassis{
         this.vehicleEngine = vehicleEngine;
     }
 
+    //Public method implementations for all of the public methods found in the Engine interface.
+    // Public method implementations that set all instance variables
+    // Public method implementations for the Chassis interface
     @Override
     public Chassis getChassisType() {
         return null;
@@ -87,9 +97,9 @@ public class Vehicle implements Engine, Chassis{
         return "Manufacturer Name : " + this.vehicleManufacturer + "\n" +
                         "Manufactured Date : " +
                         this.vehicleManufacturedDate.toString() + "\n" +
-                        "Vehicle Make : " + this.vehicleMake + "\n" +
-                        "Vehicle Model : " + this.vehicleModel + "\n" +
-                        "Vehicle Type : " + this.vehicleType + "\n" +
+                        "Vehicle Make: " + this.vehicleMake + "\n" +
+                        "Vehicle Model: " + this.vehicleModel + "\n" +
+                        "Vehicle Type: " + this.vehicleType + "\n" +
                         vehicleEngine.toString();
     }
 }
